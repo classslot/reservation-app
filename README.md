@@ -13,8 +13,7 @@
 
 ## アプリケーションのURL
 
-<!-- デプロイした場合のみ記載（未デプロイなら、この節ごと削除） -->
-- URL: （デプロイ後に記載）
+- URL: https://reservation-app-kappa-eight.vercel.app
 - テストアカウント
   | 種別 | ログインID | パスワード |
   |---|---|---|
@@ -62,7 +61,8 @@
 | Frontend | JavaScript, React 18, Vite, React Router |
 | Backend | Java 21, Spring Boot 3.3, Spring Data JPA, Spring Web |
 | Authentication | Spring Security（セッション認証）, BCrypt |
-| Database | H2 |
+| Database | H2（ローカル）, PostgreSQL（Neon） |
+| Infrastructure | Render, Vercel |
 | Build tool | Gradle, npm |
 | Test | JUnit 5, MockMvc |
 | etc. | Git, GitHub, Postman |
