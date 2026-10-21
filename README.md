@@ -200,25 +200,10 @@ npm run dev
 
 データを初期状態に戻すには、バックエンドを止めて `backend/data/` を削除し、再起動します。
 
-## 公開（デプロイ）手順の例
-
-無料枠で完結する構成の一例です（各サービスの最新の無料枠条件は公式サイトで確認してください）。
-
-1. **DB（Neon）**: PostgreSQL を作成し、接続文字列（`jdbc:postgresql://<host>/<db>?sslmode=require`）・ユーザー・パスワードを控える
-2. **バックエンド（Render）**: GitHubリポジトリから Web Service を作成（Runtime: Docker、Root Directory: `backend`）。環境変数を設定
-   - `DB_URL` / `DB_USERNAME` / `DB_PASSWORD` … Neonの接続情報
-   - `SEED_ENABLED=true` … 初回のみテストデータを作成（不要になったら `false`）
-   - `COOKIE_SECURE=true`
-3. **フロントエンド（Vercel または Netlify）**: Root Directory を `frontend` に設定。`frontend/vercel.json`（Netlifyは `frontend/public/_redirects`）内の `BACKEND_URL` を RenderのURLのホスト名に書き換える。`/api/*` をバックエンドへ転送するため、ブラウザからは同一オリジンとなりCookie認証がそのまま動く
-4. READMEの「アプリケーションのURL」にURLとテストアカウントを記載する
-
-※ 無料枠のバックエンドはアクセスがないとスリープし、最初のアクセスに1分ほどかかることがあります。
-
 ## 今後の改善案
 
-- CSRF対策（現状は学習用としてトークンを無効化し、SameSite Cookieで代替）
-- 決済・自動通知・外部カレンダー連携・パスワード再発行（要件定義で範囲外とした機能）
-- ログインIDやパスワードの変更機能、兄弟の一括管理
+- ログインIDやパスワードの変更機能、ごきょうだいの一括管理
+- パスワード再発行
 
 ## ディレクトリ構成
 
