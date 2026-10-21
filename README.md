@@ -163,7 +163,7 @@ flowchart LR
 ### 1. リポジトリを取得
 
 ```bash
-git clone <このリポジトリのURL>
+git clone <https://github.com/classslot/reservation-app.git>
 cd reservation-app
 ```
 
