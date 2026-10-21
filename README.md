@@ -65,7 +65,7 @@
 | Infrastructure | Render, Vercel |
 | Build tool | Gradle, npm |
 | Test | JUnit 5, MockMvc |
-| etc. | Git, GitHub, Postman |
+| etc. | Git, GitHub |
 
 ## ER図
 
